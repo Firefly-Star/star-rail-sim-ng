@@ -19,12 +19,9 @@
         "python/presenter/battle",
         "python/cpp_bridge"
       ],
-      "later": [
-        "battle 与 team 的驱动循环将来视情况抽通用 run_engine（出现第三个 engine 再说）。",
-        "首帧先取初始 snapshot 再进入循环的写法保留；接真实战斗后复查。"
-      ],
+      "later": [],
       "pos": {
-        "x": 1898,
+        "x": 1900,
         "y": 311
       }
     },
@@ -54,7 +51,7 @@
       ],
       "later": [],
       "pos": {
-        "x": 1266,
+        "x": 1264,
         "y": 215
       }
     },
@@ -66,12 +63,10 @@
       "implemented": true,
       "desc": "View 语义块（Title/Table/ListBlock/ProgressBar…）。纯数据、零依赖。",
       "deps": [],
-      "later": [
-        "语义块是起步集；复杂布局（图片/合并格/竖排）暂不进，需要时再扩。"
-      ],
+      "later": [],
       "pos": {
-        "x": 929,
-        "y": 179
+        "x": 928,
+        "y": 178
       }
     },
     {
@@ -85,9 +80,7 @@
         "python/presenter/view",
         "python/cpp_bridge"
       ],
-      "later": [
-        "待 TeamSnapshot 字段定了再填 body；届时给 build_view 加类型标注。"
-      ],
+      "later": [],
       "pos": {
         "x": 1607,
         "y": 420
@@ -104,9 +97,7 @@
         "python/presenter/view",
         "python/cpp_bridge"
       ],
-      "later": [
-        "待 BattleSnapshot 字段定了再填 body；届时给 build_view 加类型标注。"
-      ],
+      "later": [],
       "pos": {
         "x": 1607,
         "y": 334
@@ -123,12 +114,10 @@
         "python/ports/inputter",
         "python/cpp_bridge"
       ],
-      "later": [
-        "raw mode / 缓冲逻辑实现时定；read 与 cutoff 的复用顺手整理。"
-      ],
+      "later": [],
       "pos": {
         "x": 1607,
-        "y": 132
+        "y": 130
       }
     },
     {
@@ -141,10 +130,7 @@
       "deps": [
         "python/ports/renderer"
       ],
-      "later": [
-        "布局/颜色/字符宽都在本模块推导；动画（若有）也只在此后端。",
-        "Web 后端 = 另一个 Renderer 实现，本节点不动。"
-      ],
+      "later": [],
       "pos": {
         "x": 1607,
         "y": 238
@@ -160,9 +146,7 @@
       "deps": [
         "cpp/bind"
       ],
-      "later": [
-        "cpp 侧新增边界类型时，这里补导出——只增不改。"
-      ],
+      "later": [],
       "pos": {
         "x": 1266,
         "y": 424
@@ -176,9 +160,7 @@
       "implemented": false,
       "desc": "engine 输入契约类型（cpp）。当前空结构体。",
       "deps": [],
-      "later": [
-        "可能加 kind(设备)/timestamp/修饰键；code 语义待定。"
-      ],
+      "later": [],
       "pos": {
         "x": 211,
         "y": 381
@@ -223,9 +205,7 @@
         "cpp/BattleSnapshot",
         "cpp/InputEvent"
       ],
-      "later": [
-        "init() 阵容来源定后可能要补参；内部状态(logic/state)待引入。"
-      ],
+      "later": [],
       "pos": {
         "x": 585,
         "y": 477
@@ -242,9 +222,7 @@
         "cpp/TeamSnapshot",
         "cpp/InputEvent"
       ],
-      "later": [
-        "init() 图鉴(json)来源定后可能要补参；组队产出阵容的方法待补。"
-      ],
+      "later": [],
       "pos": {
         "x": 585,
         "y": 371
@@ -264,9 +242,7 @@
         "cpp/TeamSnapshot",
         "cpp/InputEvent"
       ],
-      "later": [
-        "cpp 类型加字段/加类型时同步补导出——只增不改结构。"
-      ],
+      "later": [],
       "pos": {
         "x": 929,
         "y": 424
