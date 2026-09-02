@@ -1,0 +1,3 @@
+[submodule "cpp-core-ng"]
+	path = cpp-core-ng
+	url = https://github.com/Firefly-Star/cpp-core-ng.git
