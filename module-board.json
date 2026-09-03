@@ -29,8 +29,8 @@
       "id": "python/ports/inputter",
       "label": "ports/inputter.py",
       "group": "python",
-      "frozen": "no",
-      "implemented": false,
+      "frozen": "yes",
+      "implemented": true,
       "desc": "输入契约：begin / read_key_blocking / cutoff / end。只采集转发，语义归 cpp。",
       "deps": [],
       "later": [],
@@ -43,8 +43,8 @@
       "id": "python/ports/renderer",
       "label": "ports/renderer.py",
       "group": "python",
-      "frozen": "no",
-      "implemented": false,
+      "frozen": "yes",
+      "implemented": true,
       "desc": "渲染契约：begin / render(view) / close。只认视图语义。",
       "deps": [
         "python/presenter/view"
@@ -107,8 +107,8 @@
       "id": "python/impl/os_keyboard",
       "label": "impl/os_keyboard.py",
       "group": "python",
-      "frozen": "no",
-      "implemented": false,
+      "frozen": "yes",
+      "implemented": true,
       "desc": "OS 键盘输入实现：读键 → 构造 InputEvent。",
       "deps": [
         "python/ports/inputter",

@@ -24,10 +24,10 @@ def main() -> None:
     renderer = TuiRenderer()
 
     try:
-        inputter.begin()
         renderer.begin()
 
         # —— 组队 engine：事件驱动。没有时钟，按一个键处理一个，不空转 ——
+        inputter.begin()
         team_engine = TeamEngine()
         team_engine.init()
         snapshot = team_engine.get_snapshot()        # 首帧初始快照
@@ -38,6 +38,7 @@ def main() -> None:
             snapshot = team_engine.get_snapshot()    # 取更新后的快照
 
         # —— 战斗 engine：时钟驱动。阵容来源未定（将由组队结果给出），暂无参 init ——
+        inputter.begin()
         battle_engine = BattleEngine()
         battle_engine.init()
         while not battle_engine.is_over():
