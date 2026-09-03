@@ -49,8 +49,18 @@ def _read_char(fd: int, timeout: float | None) -> str:
 class OsKeyboardInput(Inputter):
     """基于终端 OS 键盘缓冲的输入实现。"""
 
-    def __init__(self, max_reads: int = 64, poll_seconds: float = 0.0) -> None:
-        self._fd = sys.stdin.fileno()
+    def __init__(
+        self,
+        max_reads: int = 64,
+        poll_seconds: float = 0.0,
+        fd: int | None = None,
+    ) -> None:
+        if fd is None:
+            try:
+                fd = sys.stdin.fileno()
+            except Exception:
+                fd = 0  # 拿不到（如 pytest 伪 stdin）时回退到标准输入
+        self._fd = fd
         self._max_reads = max_reads
         self._poll = poll_seconds
 

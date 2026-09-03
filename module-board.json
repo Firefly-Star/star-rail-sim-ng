@@ -124,8 +124,8 @@
       "id": "python/impl/tui_renderer",
       "label": "impl/tui_renderer.py",
       "group": "python",
-      "frozen": "no",
-      "implemented": false,
+      "frozen": "yes",
+      "implemented": true,
       "desc": "TUI 渲染后端：把 View 画到终端（备用屏 + 光标控制）。",
       "deps": [
         "python/ports/renderer"
